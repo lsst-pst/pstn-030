@@ -1,11 +1,25 @@
 \section{TECH OUTLINE}
 
-\begin{itemize}
-\item Web friendly (as oppose to science friendly) data pipeline
-\item Separate and specialized web servers for frontend and backend (for each web product), science assets, media assets (shared between all web products)
-\item Separate but similar and easily reproducible environments for local, staging, and production (for each web product)
-\item Capacity to develop features as testable, usable, reusable, static standalone components
-\item Documentation for project best practices, local development, managing staging, and releasing to production
-\end{itemize}
+\textbf{Non-specialist Audiences.}
+As a scientific endeavour, the greatest resources the Rubin Observatory can provide their audience, the scientific community, are science-friendly data and the tools to interpret it.  Engagement with EPO's non specialist audiences (i.e. a science-interested public and students in the classroom), is much the same: web-friendly data and the stories behind it.  Our online products are not designed to help you make a new discover about the universe, but instead encourage you to discover a lasting interest in astronomy and LSST.  
+
+\textbf{What is the difference between science-friendly data and web-friendly data?}  
+DM's data products provide a pipeline from the telescope to a scientist's computer.  EPO's data pipeline builds on DM's services to provide an API that delivers only what's valuable to specific astronomy topics; streamlines the data to a format useful in powering data visualizations in the browser.  
+
+\textbf{What is the difference between data tools and data stories?}
+One of the pillars of our EPO program are in classroom experiences called Investigations.  An Investigation is an online educational experience that reinforces students' existing understanding of astronomy topics.  They make strong use of narrative, a familiar quiz-like structure, and interactive data visualizations.  While a data tool invites you to use your own knowledge of a topic to manipulate data towards our own ends, a data story  not only describes the data, but also supplies its meaning, and indicates what conclusions you should draw from it.  An Investigation is a data story: it prompts a student to engage with LSST data on a self-guided exploration of an astronomy topic, those pioneers critical to its study, and how it applies to other fields.  Unlike tools used by astronomers, which not only require fore-knowledge, but also extensive documentation to use, the tools embedded in our Investigations have a UI designed to be self-descriptive in terms of their use and purpose.  This means we can spend less time training poor users how to engage with the Investigations, and more time focusing on the story the data tells.  Because our Investigations are primarily designed to be used in the classroom, with a teacher's involvement, we also provide supplementary materials which describe how to use the investigations as-is, how to modify them, how to adapt them to an existing lesson, and how to create a lesson around them.  These supplementary materials are provided alongside the investigations themselves (as web pages) as well as made available as pdf.  Similarly to the investigations themselves, these supplementary materials are a reflection of what kind of information teachers need, and how they might successfully integrate Investigations into their classrooms.
+
+\textbf{Prototyping}
+In many ways, working for an EPO team ahead of operations is like working for a Start Up company: you don't have any users, you're a mess of self-imposed deadlines ahead of being in production. and you need to build things quickly so you can share progress with stakeholders.  For this reason, among others, we are building our Investigations in the React framework.  React is a full-featured frontend javascript framework predicated on leveraging state to manage dynamic UI, and a modular, declarative, componentized project structure. This leads to flexible, reusable, highly organized code.  In addition, it is fully open source, and backed by a huge community (the largest contributor being Facebook).  React also seamlessly integrates with any number of third party node packages, and building your work as an extension of the work of others is a true tenant of creating prototypes quickly.  While it's always a risk to depend on the work of others (you never know what bugs you'll run into, when a package will no longer be supported, etc.) there is no denying that utilizing properly vetted packages is a huge time saver and confidence booster.  Yet still, always leave yourself an exit plan should you ever need to replace a package with another similar one, or your own custom code.  Prototyping (creating minimum viable products) is crucial to exploring/defining what products and services EPO should pursue in operations.  A prototype should also be testable, usable, and reusable as a static standalone components.  That means you should be able to use in the context for which you built it, as well as all on its own.  Why is this important? Because it leaves you the flexibility to rearrange your existing building blocks instead of 
 
 
+\textbf{Accessibility and Usability}
+Accessibility means don't try to guess who won't use your services, build them so they can be used by anyone.
+Do all UIs/UXs need to be fully accessible?
+Is it ok if some and not all of your audience can access all of your products?  Which products is it most important to make fully accessible?
+When to offer an analogous UI/UX in addition to one designed for a certain type of user? When to offer the same experience to all users?
+Is it ok to deliberately create a web experience that only a highly dexterous sighted person can engage with?  Is it ok if you deliberately did not offer an analogous experience to someone who can only experience the web keyboard-only?
+Accessibility and usability applies to the developer experience as well as the end-user experience.  Documentation provides you the best resources as a developer to learn how to effectively and efficiently contribute to a codebase.  Always assume you're writing code for someone else to read.  Always assume someone else is going to maintain your code and services.  Don't memorize processes: write them down.
+
+\textbf{Tools and Services}
+List some of the technology choices that we made, without going into exhaustive detail.  
